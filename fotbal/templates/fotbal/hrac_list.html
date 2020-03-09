@@ -1,0 +1,30 @@
+{% extends './base.html' %}
+
+{% block content %}
+<table class="table container">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Datum narození</th>
+            <th>Post hráče</th>
+            <th>Číslo dresu</th>
+            <th>Název týmu</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for hrac in players %}
+        <tr>
+            <td>{{ player.id_hrace }}</td>
+            <td>{{ player.jmeno }}</td>
+            <td>{{ player.prijmeni }}</td>
+            <td>{{ player.narozeni }}</td>
+            <td>{{ player.post }}</td>
+            <td>{{ player.cislo_dresu }}</td>
+            <td>{{ player.tym_nazev }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
